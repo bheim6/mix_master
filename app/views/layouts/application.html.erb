@@ -7,6 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <% if current_user %>
+    <h3>Welcome, <%= current_user.name %></h3>
+    <%= link_to "Sign Out", logout_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign in with Spotify", "/auth/spotify" %>
+  <% end %>
 
 <%= yield %>
 

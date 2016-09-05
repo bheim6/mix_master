@@ -30,6 +30,12 @@ gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use OmniAuth for authorization
+gem 'omniauth-oauth2'
+
+# Use figaro for authorization (storing keys)
+gem 'figaro'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
